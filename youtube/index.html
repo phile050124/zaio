@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="styles.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>YouTube</title>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        <i class="material-icons">view_headline</i>
+        <img src="https://www.vectorlogo.zone/logos/youtube/youtube-ar21.svg" alt="">
+      </div>
+      <div class="searchbar">
+       <form class="search">
+        <input type="text" />
+        <button><i class="material-icons">search</i></button>
+       </form>
+       <i class="material-icons">keyboard_voice</i>
+      </div>
+      <div class="navigation-icons">
+       <i class="material-icons">video_call</i>
+       <i class="material-icons">apps</i>
+       <i class="material-icons">notifications</i>
+       <i class="material-icons">account_circle</i>
+      </div>
+    </div>
+    <div class="mainbody">
+      <div class="categories">
+          <div class="category-section">
+              <span class="category active">
+                  <i class="material-icons">home</i>
+                  Home
+              </span>
+              <span class="category">
+                  <i class="material-icons">explore</i>
+                  Explore
+              </span>
+              <span class="category">
+                  <i class="material-icons">subscriptions</i>
+                  Subscriptions
+              </span>
+          </div>
+          <div class="category-section">
+              <span class="category">
+                  <i class="material-icons">video_library</i>
+                  Library
+              </span>
+              <span class="category">
+                  <i class="material-icons">history</i>
+                  History
+              </span>
+              <span class="category">
+                  <i class="material-icons">video_label</i>
+                  Your videos
+              </span>
+              <span class="category">
+                  <i class="material-icons">watch_later</i>
+                  Watch later
+              </span>
+              <span class="category">
+                  <i class="material-icons">expand_more</i>
+                  Show more
+              </span>
+          </div>
+          <div class="category-section">
+              <p class="category_heading">SUBSCRIPTIONS</p>
+              <span class="category">
+                  <i class="material-icons">account_circle</i>
+                  Zaio
+              </span>
+              <span class="category">
+                  <i class="material-icons">account_circle</i>
+                  Akhil Boddu
+              </span>
+              <span class="category">
+                  <i class="material-icons">account_circle</i>
+                  Y Combinator
+              </span>
+              <span class="category">
+                  <i class="material-icons">account_circle</i>
+                  Zaio
+              </span>
+              <span class="category">
+                  <i class="material-icons">account_circle</i>
+                  Zaio
+              </span>
+          </div>
+          <div class="category-section">
+              <span class="category">
+                  <i class="material-icons">settings</i>
+                  Settings
+              </span>
+              <span class="category">
+                  <i class="material-icons">history</i>
+                  Report History
+              </span>
+              <span class="category">
+                  <i class="material-icons">help</i>
+                  Help
+              </span>
+              <span class="category">
+                  <i class="material-icons">feedback</i>
+                  Send Feedback
+              </span>
+          </div>
+          <div class="cagories-footer">
+              <div class="footer-section">
+                  <span>About</span>
+                  <span>Press</span>
+                  <span>Copyright</span>
+                  <span>Contact Us</span>
+                  <span>Creator</span>
+                  <span>Advertise</span>
+                  <span>Developers</span>
+              </div>
+              <div class="footer-section">
+                  <span>Terms</span>
+                  <span>Privacy</span>
+                  <span>Policy & Safety</span>
+                  <span>How YouTube works</span>
+                  <span>Test new features</span>
+              </div>
+              <span class="copyright">&copy; 2021 Zaio YouTube Clone</span>
+          </div>
+      </div>
+      <div class="videos">
+          <div class="video-grid">
+              <div class="video">
+                  <div class="thumbnail">
+                      <img src="data:image/jpeg;base64,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" alt="">
+                  </div>
+                  <div class="details">
+                      <div class="profile">
+                          <img src="https://yt3.ggpht.com/ytc/AOPolaRvvUvn6t9MtTRGuFcz7Ba1f1T6BKYZ01egnEWJ=s68-c-k-c0x00ffffff-no-rj" alt="">
+                      </div>
+                      <div class="video-details">
+                          <p>Welcome to Zaio</p>
+                          <div class="posted-by">
+                          <span>Zaio</span>
+                        <div class="views-date">
+                          <span>102k Views</span>
+                          <span>.</span>
+                          <span>1 month ago</span>
+                        </div>
+                      </div>
+                    </div>  
+                  </div>
+              </div>
+              <div class="video">
+                  <div class="thumbnail">
+                      <img src="https://i.ytimg.com/vi/x45fLUTHCuk/hq720.jpg?sqp=-oaymwE2COgCEMoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhiIGIoYjAP&rs=AOn4CLCMFwG1bOKm2ItnzoeDYCLpEWwh1Q" alt="">
+                  </div>
+                  <div class="details">
+                      <div class="profile">
+                          <img src="https://yt3.ggpht.com/tyLW5LsJGwr4ViM30OeYbuLcu_MXfpRzP8y-X9_aKfTNJeMFHmnNbPyxxhaFDA9NRgwEu9mT-g=s68-c-k-c0x00ffffff-no-rj" alt="">
+                      </div>
+                      <div class="video-details">
+                          <p>The most insane crashes of 2020</p>
+                          <div class="posted-by">
+                          <span>FORMULA 1</span>
+                        <div class="views-date">
+                          <span>37k Views</span>
+                          <span>.</span>
+                          <span>1 month ago</span>
+                        </div>
+                      </div>
+                    </div>  
+                  </div>
+              </div>
+              <div class="video">
+                  <div class="thumbnail">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt1IgIUzbvxkidENOl2DQWSuwx4o3snyBbKg&usqp=CAU" alt="">
+                  </div>
+                  <div class="details">
+                      <div class="profile">
+                          <img src="https://yt3.ggpht.com/5q85ZXh7uwNuW8GASY8-J3J8E4EJuRYyFvf3ju_meI0CXw4Q23hXShY80y-AaO5SJLqh3jT6Tw=s68-c-k-c0x00ffffff-no-rj" alt="">
+                      </div>
+                      <div class="video-details">
+                          <p>How to make YouTube thumbnail</p>
+                          <div class="posted-by">
+                          <span>Tut guy</span>
+                        <div class="views-date">
+                          <span>37k Views</span>
+                          <span>.</span>
+                          <span>1 month ago</span>
+                        </div>
+                      </div>
+                    </div>           
+                  </div>
+              </div>
+              <div class="video">
+                  <div class="thumbnail">
+                      <img src="data:image/jpeg;base64,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" alt="">
+                  </div>
+                  <div class="details">
+                      <div class="profile">
+                          <img src="https://yt3.ggpht.com/X9eoDIB9cgb1s-kvATRs1lQDcU4Fjc15NDV9s9FF8ck7IsA8u7OdijaernoDV9LLdePgjlt_=s68-c-k-c0x00ffffff-no-rj" alt="">
+                      </div>
+                      <div class="video-details">
+                          <p>How to make YouTube Thumbnails the right way</p>
+                          <div class="posted-by">
+                          <span>Tut Gal</span>
+                        <div class="views-date">
+                          <span>375k Views</span>
+                          <span>.</span>
+                          <span>22 month ago</span>
+                        </div>
+                      </div>
+                    </div>  
+                  </div>
+              </div>
+
+              <div class="video">
+                  <div class="thumbnail">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt1IgIUzbvxkidENOl2DQWSuwx4o3snyBbKg&usqp=CAU" alt="">
+                  </div>
+                  <div class="details">
+                      <div class="profile">
+                          <img src="https://yt3.ggpht.com/ytc/AOPolaRvvUvn6t9MtTRGuFcz7Ba1f1T6BKYZ01egnEWJ=s68-c-k-c0x00ffffff-no-rj" alt="">
+                      </div>
+                      <div class="video-details">
+                          <p>Introduction to Web Development - Workshop 1</p>
+                          <div class="posted-by">
+                          <span>FORMULA 1</span>
+                        <div class="views-date">
+                          <span>37k Views</span>
+                          <span>.</span>
+                          <span>1 month ago</span>
+                        </div>
+                      </div>
+                    </div>  
+                  </div>
+              </div>
+              <div class="video">
+                  <div class="thumbnail">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt1IgIUzbvxkidENOl2DQWSuwx4o3snyBbKg&usqp=CAU" alt="">
+                  </div>
+                  <div class="details">
+                      <div class="profile">
+                          <img src="https://yt3.ggpht.com/tyLW5LsJGwr4ViM30OeYbuLcu_MXfpRzP8y-X9_aKfTNJeMFHmnNbPyxxhaFDA9NRgwEu9mT-g=s68-c-k-c0x00ffffff-no-rj" alt="">
+                      </div>
+                      <div class="video-details">
+                          <p>Introduction to Web Development - Workshop 1</p>
+                          <div class="posted-by">
+                          <span>FORMULA 1</span>
+                        <div class="views-date">
+                          <span>37k Views</span>
+                          <span>.</span>
+                          <span>1 month ago</span>
+                        </div>
+                      </div>
+                    </div>  
+                  </div>
+              </div>
+              <div class="video">
+                  <div class="thumbnail">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt1IgIUzbvxkidENOl2DQWSuwx4o3snyBbKg&usqp=CAU" alt="">
+                  </div>
+                  <div class="details">
+                      <div class="profile">
+                          <img src="https://yt3.ggpht.com/5q85ZXh7uwNuW8GASY8-J3J8E4EJuRYyFvf3ju_meI0CXw4Q23hXShY80y-AaO5SJLqh3jT6Tw=s68-c-k-c0x00ffffff-no-rj" alt="">
+                      </div>
+                      <div class="video-details">
+                          <p>Introduction to Web Development - Workshop 1</p>
+                          <div class="posted-by">
+                          <span>FORMULA 1</span>
+                        <div class="views-date">
+                          <span>37k Views</span>
+                          <span>.</span>
+                          <span>1 month ago</span>
+                        </div>
+                      </div>
+                    </div>           
+                  </div>
+              </div>
+              <div class="video">
+                  <div class="thumbnail">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt1IgIUzbvxkidENOl2DQWSuwx4o3snyBbKg&usqp=CAU" alt="">
+                  </div>
+                  <div class="details">
+                      <div class="profile">
+                          <img src="https://yt3.ggpht.com/X9eoDIB9cgb1s-kvATRs1lQDcU4Fjc15NDV9s9FF8ck7IsA8u7OdijaernoDV9LLdePgjlt_=s68-c-k-c0x00ffffff-no-rj" alt="">
+                      </div>
+                      <div class="video-details">
+                          <p>Introduction to Web Development - Workshop 1</p>
+                          <div class="posted-by">
+                          <span>FORMULA 1</span>
+                        <div class="views-date">
+                          <span>37k Views</span>
+                          <span>.</span>
+                          <span>1 month ago</span>
+                        </div>
+                      </div>
+                    </div>  
+                  </div>
+              </div>
+
+              <div class="video">
+                  <div class="thumbnail">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt1IgIUzbvxkidENOl2DQWSuwx4o3snyBbKg&usqp=CAU" alt="">
+                  </div>
+                  <div class="details">
+                      <div class="profile">
+                          <img src="https://yt3.ggpht.com/ytc/AOPolaRvvUvn6t9MtTRGuFcz7Ba1f1T6BKYZ01egnEWJ=s68-c-k-c0x00ffffff-no-rj" alt="">
+                      </div>
+                      <div class="video-details">
+                          <p>Introduction to Web Development - Workshop 1</p>
+                          <div class="posted-by">
+                          <span>FORMULA 1</span>
+                        <div class="views-date">
+                          <span>37k Views</span>
+                          <span>.</span>
+                          <span>1 month ago</span>
+                        </div>
+                      </div>
+                    </div>  
+                  </div>
+              </div>
+              <div class="video">
+                  <div class="thumbnail">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt1IgIUzbvxkidENOl2DQWSuwx4o3snyBbKg&usqp=CAU" alt="">
+                  </div>
+                  <div class="details">
+                      <div class="profile">
+                          <img src="https://yt3.ggpht.com/tyLW5LsJGwr4ViM30OeYbuLcu_MXfpRzP8y-X9_aKfTNJeMFHmnNbPyxxhaFDA9NRgwEu9mT-g=s68-c-k-c0x00ffffff-no-rj" alt="">
+                      </div>
+                      <div class="video-details">
+                          <p>Introduction to Web Development - Workshop 1</p>
+                          <div class="posted-by">
+                          <span>FORMULA 1</span>
+                        <div class="views-date">
+                          <span>37k Views</span>
+                          <span>.</span>
+                          <span>1 month ago</span>
+                        </div>
+                      </div>
+                    </div>  
+                  </div>
+              </div>
+              <div class="video">
+                  <div class="thumbnail">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt1IgIUzbvxkidENOl2DQWSuwx4o3snyBbKg&usqp=CAU" alt="">
+                  </div>
+                  <div class="details">
+                      <div class="profile">
+                          <img src="https://yt3.ggpht.com/5q85ZXh7uwNuW8GASY8-J3J8E4EJuRYyFvf3ju_meI0CXw4Q23hXShY80y-AaO5SJLqh3jT6Tw=s68-c-k-c0x00ffffff-no-rj" alt="">
+                      </div>
+                      <div class="video-details">
+                          <p>Introduction to Web Development - Workshop 1</p>
+                          <div class="posted-by">
+                          <span>FORMULA 1</span>
+                        <div class="views-date">
+                          <span>37k Views</span>
+                          <span>.</span>
+                          <span>1 month ago</span>
+                        </div>
+                      </div>
+                    </div>           
+                  </div>
+              </div>
+              <div class="video">
+                  <div class="thumbnail">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt1IgIUzbvxkidENOl2DQWSuwx4o3snyBbKg&usqp=CAU" alt="">
+                  </div>
+                  <div class="details">
+                      <div class="profile">
+                          <img src="https://yt3.ggpht.com/X9eoDIB9cgb1s-kvATRs1lQDcU4Fjc15NDV9s9FF8ck7IsA8u7OdijaernoDV9LLdePgjlt_=s68-c-k-c0x00ffffff-no-rj" alt="">
+                      </div>
+                      <div class="video-details">
+                          <p>Introduction to Web Development - Workshop 1</p>
+                          <div class="posted-by">
+                          <span>FORMULA 1</span>
+                        <div class="views-date">
+                          <span>37k Views</span>
+                          <span>.</span>
+                          <span>1 month ago</span>
+                        </div>
+                      </div>
+                    </div>  
+                  </div>
+              </div>
+
+              <div class="video">
+                  <div class="thumbnail">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt1IgIUzbvxkidENOl2DQWSuwx4o3snyBbKg&usqp=CAU" alt="">
+                  </div>
+                  <div class="details">
+                      <div class="profile">
+                          <img src="https://yt3.ggpht.com/ytc/AOPolaRvvUvn6t9MtTRGuFcz7Ba1f1T6BKYZ01egnEWJ=s68-c-k-c0x00ffffff-no-rj" alt="">
+                      </div>
+                      <div class="video-details">
+                          <p>Introduction to Web Development - Workshop 1</p>
+                          <div class="posted-by">
+                          <span>FORMULA 1</span>
+                        <div class="views-date">
+                          <span>37k Views</span>
+                          <span>.</span>
+                          <span>1 month ago</span>
+                        </div>
+                      </div>
+                    </div>  
+                  </div>
+              </div>
+              <div class="video">
+                  <div class="thumbnail">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt1IgIUzbvxkidENOl2DQWSuwx4o3snyBbKg&usqp=CAU" alt="">
+                  </div>
+                  <div class="details">
+                      <div class="profile">
+                          <img src="https://yt3.ggpht.com/tyLW5LsJGwr4ViM30OeYbuLcu_MXfpRzP8y-X9_aKfTNJeMFHmnNbPyxxhaFDA9NRgwEu9mT-g=s68-c-k-c0x00ffffff-no-rj" alt="">
+                      </div>
+                      <div class="video-details">
+                          <p>Introduction to Web Development - Workshop 1</p>
+                          <div class="posted-by">
+                          <span>FORMULA 1</span>
+                        <div class="views-date">
+                          <span>37k Views</span>
+                          <span>.</span>
+                          <span>1 month ago</span>
+                        </div>
+                      </div>
+                    </div>  
+                  </div>
+              </div>
+              <div class="video">
+                  <div class="thumbnail">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt1IgIUzbvxkidENOl2DQWSuwx4o3snyBbKg&usqp=CAU" alt="">
+                  </div>
+                  <div class="details">
+                      <div class="profile">
+                          <img src="https://yt3.ggpht.com/5q85ZXh7uwNuW8GASY8-J3J8E4EJuRYyFvf3ju_meI0CXw4Q23hXShY80y-AaO5SJLqh3jT6Tw=s68-c-k-c0x00ffffff-no-rj" alt="">
+                      </div>
+                      <div class="video-details">
+                          <p>Introduction to Web Development - Workshop 1</p>
+                          <div class="posted-by">
+                          <span>FORMULA 1</span>
+                        <div class="views-date">
+                          <span>37k Views</span>
+                          <span>.</span>
+                          <span>1 month ago</span>
+                        </div>
+                      </div>
+                    </div>           
+                  </div>
+              </div>
+              <div class="video">
+                  <div class="thumbnail">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt1IgIUzbvxkidENOl2DQWSuwx4o3snyBbKg&usqp=CAU" alt="">
+                  </div>
+                  <div class="details">
+                      <div class="profile">
+                          <img src="https://yt3.ggpht.com/X9eoDIB9cgb1s-kvATRs1lQDcU4Fjc15NDV9s9FF8ck7IsA8u7OdijaernoDV9LLdePgjlt_=s68-c-k-c0x00ffffff-no-rj" alt="">
+                      </div>
+                      <div class="video-details">
+                          <p>Introduction to Web Development - Workshop 1</p>
+                          <div class="posted-by">
+                          <span>FORMULA 1</span>
+                        <div class="views-date">
+                          <span>37k Views</span>
+                          <span>.</span>
+                          <span>1 month ago</span>
+                        </div>
+                      </div>
+                    </div>  
+                  </div>
+              </div>
+
+              <div class="video">
+                  <div class="thumbnail">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt1IgIUzbvxkidENOl2DQWSuwx4o3snyBbKg&usqp=CAU" alt="">
+                  </div>
+                  <div class="details">
+                      <div class="profile">
+                          <img src="https://yt3.ggpht.com/ytc/AOPolaRvvUvn6t9MtTRGuFcz7Ba1f1T6BKYZ01egnEWJ=s68-c-k-c0x00ffffff-no-rj" alt="">
+                      </div>
+                      <div class="video-details">
+                          <p>Introduction to Web Development - Workshop 1</p>
+                          <div class="posted-by">
+                          <span>FORMULA 1</span>
+                        <div class="views-date">
+                          <span>37k Views</span>
+                          <span>.</span>
+                          <span>1 month ago</span>
+                        </div>
+                      </div>
+                    </div>  
+                  </div>
+              </div>
+              <div class="video">
+                  <div class="thumbnail">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt1IgIUzbvxkidENOl2DQWSuwx4o3snyBbKg&usqp=CAU" alt="">
+                  </div>
+                  <div class="details">
+                      <div class="profile">
+                          <img src="https://yt3.ggpht.com/tyLW5LsJGwr4ViM30OeYbuLcu_MXfpRzP8y-X9_aKfTNJeMFHmnNbPyxxhaFDA9NRgwEu9mT-g=s68-c-k-c0x00ffffff-no-rj" alt="">
+                      </div>
+                      <div class="video-details">
+                          <p>Introduction to Web Development - Workshop 1</p>
+                          <div class="posted-by">
+                          <span>FORMULA 1</span>
+                        <div class="views-date">
+                          <span>37k Views</span>
+                          <span>.</span>
+                          <span>1 month ago</span>
+                        </div>
+                      </div>
+                    </div>  
+                  </div>
+              </div>
+              <div class="video">
+                  <div class="thumbnail">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt1IgIUzbvxkidENOl2DQWSuwx4o3snyBbKg&usqp=CAU" alt="">
+                  </div>
+                  <div class="details">
+                      <div class="profile">
+                          <img src="https://yt3.ggpht.com/5q85ZXh7uwNuW8GASY8-J3J8E4EJuRYyFvf3ju_meI0CXw4Q23hXShY80y-AaO5SJLqh3jT6Tw=s68-c-k-c0x00ffffff-no-rj" alt="">
+                      </div>
+                      <div class="video-details">
+                          <p>Introduction to Web Development - Workshop 1</p>
+                          <div class="posted-by">
+                          <span>FORMULA 1</span>
+                        <div class="views-date">
+                          <span>37k Views</span>
+                          <span>.</span>
+                          <span>1 month ago</span>
+                        </div>
+                      </div>
+                    </div>           
+                  </div>
+              </div>
+              <div class="video">
+                  <div class="thumbnail">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt1IgIUzbvxkidENOl2DQWSuwx4o3snyBbKg&usqp=CAU" alt="">
+                  </div>
+                  <div class="details">
+                      <div class="profile">
+                          <img src="https://yt3.ggpht.com/X9eoDIB9cgb1s-kvATRs1lQDcU4Fjc15NDV9s9FF8ck7IsA8u7OdijaernoDV9LLdePgjlt_=s68-c-k-c0x00ffffff-no-rj" alt="">
+                      </div>
+                      <div class="video-details">
+                          <p>Introduction to Web Development - Workshop 1</p>
+                          <div class="posted-by">
+                          <span>FORMULA 1</span>
+                        <div class="views-date">
+                          <span>37k Views</span>
+                          <span>.</span>
+                          <span>1 month ago</span>
+                        </div>
+                      </div>
+                    </div>  
+                  </div>
+              </div>
+
+              <div class="video">
+                  <div class="thumbnail">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt1IgIUzbvxkidENOl2DQWSuwx4o3snyBbKg&usqp=CAU" alt="">
+                  </div>
+                  <div class="details">
+                      <div class="profile">
+                          <img src="https://yt3.ggpht.com/ytc/AOPolaRvvUvn6t9MtTRGuFcz7Ba1f1T6BKYZ01egnEWJ=s68-c-k-c0x00ffffff-no-rj" alt="">
+                      </div>
+                      <div class="video-details">
+                          <p>Introduction to Web Development - Workshop 1</p>
+                          <div class="posted-by">
+                          <span>FORMULA 1</span>
+                        <div class="views-date">
+                          <span>37k Views</span>
+                          <span>.</span>
+                          <span>1 month ago</span>
+                        </div>
+                      </div>
+                    </div>  
+                  </div>
+              </div>
+              <div class="video">
+                  <div class="thumbnail">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt1IgIUzbvxkidENOl2DQWSuwx4o3snyBbKg&usqp=CAU" alt="">
+                  </div>
+                  <div class="details">
+                      <div class="profile">
+                          <img src="https://yt3.ggpht.com/tyLW5LsJGwr4ViM30OeYbuLcu_MXfpRzP8y-X9_aKfTNJeMFHmnNbPyxxhaFDA9NRgwEu9mT-g=s68-c-k-c0x00ffffff-no-rj" alt="">
+                      </div>
+                      <div class="video-details">
+                          <p>Introduction to Web Development - Workshop 1</p>
+                          <div class="posted-by">
+                          <span>FORMULA 1</span>
+                        <div class="views-date">
+                          <span>37k Views</span>
+                          <span>.</span>
+                          <span>1 month ago</span>
+                        </div>
+                      </div>
+                    </div>  
+                  </div>
+              </div>
+              <div class="video">
+                  <div class="thumbnail">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt1IgIUzbvxkidENOl2DQWSuwx4o3snyBbKg&usqp=CAU" alt="">
+                  </div>
+                  <div class="details">
+                      <div class="profile">
+                          <img src="https://yt3.ggpht.com/5q85ZXh7uwNuW8GASY8-J3J8E4EJuRYyFvf3ju_meI0CXw4Q23hXShY80y-AaO5SJLqh3jT6Tw=s68-c-k-c0x00ffffff-no-rj" alt="">
+                      </div>
+                      <div class="video-details">
+                          <p>Introduction to Web Development - Workshop 1</p>
+                          <div class="posted-by">
+                          <span>FORMULA 1</span>
+                        <div class="views-date">
+                          <span>37k Views</span>
+                          <span>.</span>
+                          <span>1 month ago</span>
+                        </div>
+                      </div>
+                    </div>           
+                  </div>
+              </div>
+              <div class="video">
+                  <div class="thumbnail">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt1IgIUzbvxkidENOl2DQWSuwx4o3snyBbKg&usqp=CAU" alt="">
+                  </div>
+                  <div class="details">
+                      <div class="profile">
+                          <img src="https://yt3.ggpht.com/X9eoDIB9cgb1s-kvATRs1lQDcU4Fjc15NDV9s9FF8ck7IsA8u7OdijaernoDV9LLdePgjlt_=s68-c-k-c0x00ffffff-no-rj" alt="">
+                      </div>
+                      <div class="video-details">
+                          <p>Introduction to Web Development - Workshop 1</p>
+                          <div class="posted-by">
+                          <span>FORMULA 1</span>
+                        <div class="views-date">
+                          <span>37k Views</span>
+                          <span>.</span>
+                          <span>1 month ago</span>
+                        </div>
+                      </div>
+                    </div>  
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

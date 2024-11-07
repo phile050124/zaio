@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.banner-wrap {
+    background-image: url("https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto:best/Model-S-homepage-desktop");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    padding: 0 32px;
+  }
+  
+  ul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Spread the menu items across the page */
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    margin: 0 15px; /* Optional: Add spacing between items */
+  }
+  
+  a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+  }
+  
+.logo {
+    height: 24px;
+    width: 120px;
+}
+
+main {
+    text-align: center;
+    height: calc(100vh - 56px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* set height for main */
+/* flex, column, spacebetween  */
