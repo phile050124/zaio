@@ -4,8 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="netflix\assets\logo.png">
-        <title>Global Shapers Tshwane Hub</title>
+        <title>Tshwane Hub/Home</title>
         <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     </head>
     <body>
@@ -31,13 +32,24 @@
                 </ul>
             </nav>        
         </header>
-        <!--bio section-->    
-        <section class="bio">
-            <h1>Welcome to Global Shapers Tshwane Hub</h1>
-            <p>Empowering youth to shape the future through impactful projects.</p>
-            <button onclick="location.href='about.html'">Learn More</button>
-        </section>        
-        <!-- Projects Section -->
+        <!--overview section-->
+        <section class="overview">
+            <div class="container">
+                <h2>Overview</h2>
+                <p>Welcome to the Global Shapers Tshwane Hub, where passionate young leaders come together to shape a better future. As part of a global community initiated by the World Economic Forum, we are dedicated to driving positive change through impactful local projects and initiatives.</p>
+            </div>
+            <div class="container">
+                <p>Our hub serves as a platform for youth to connect, collaborate, and take action on key issues affecting our community, including education, sustainability, and economic empowerment. With a focus on innovation and inclusivity, we work tirelessly to empower individuals and uplift communities in Tshwane and beyond.</p>
+            </div>
+            <div class="container">
+                <p>Join us in our mission to create lasting impact and inspire the next generation of changemakers. Together, we can make a difference!</p>
+            </div>
+            <div class="bio">
+                <p>Empowering youth to shape the future through impactful projects.</p>
+                <button class="custom-btn btn" onclick="location.href='about.html'">Learn More</button>
+            </div>
+        </section>       
+        <!--Projects Section -->
         <section class="projects">
             <h2>Featured Projects</h2>
             <div class="wrapper">
@@ -45,15 +57,14 @@
                     <div class="col"
                      ontouchstart="this.classList.toggle('hover');">
                         <div class="container">
-                            <div class="front" style="background-image: url(https://unsplash.it/500/500/)">
+                            <div class="front" style="background-image: url(./assets/KASIDLOGO.png)">
                                 <div class="inner">
-                                    <p>Diligord</p>
-                                    <span>Lorem ipsum</span>
+                                    <span>Kasi Digital</span>
                                 </div>
                             </div>
                             <div class="back">
                                 <div class="inner">
-                                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                                  <p>Kasi Digital is a free skills development program that assists unemployed youth in learning software development and securing employment opportunities.</p>
                                 </div>
                             </div>
                         </div>
@@ -62,15 +73,14 @@
                     <div class="col" 
                      ontouchstart="this.classList.toggle('hover');">
                         <div class="container">
-                            <div class="front" style= "background-image: url(https://unsplash.it/511/511/)">
+                            <div class="front" style= "background-image: url(./assets/LCOY.jpg)">
                                 <div class="inner">
-                                    <p>Rocogged</p>
-                                    <span>Lorem ipsum</span>
+                                    <span>LCOY</span>
                                 </div>
                             </div>
                             <div class="back">
                                 <div class="inner">
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                                    <p>LCOY is a series of national climate conferences organized under the YOUNGO umbrella, the youth constituency of the UNFCCC</p>
                                 </div>
                             </div>
                         </div>
@@ -110,25 +120,44 @@
                 <button onclick="location.href='projects.html'">View All Projects</button>
             </div>    
         </section>
-
-        <!-- Carousel Section -->
-        <section class="carousel">
-            <div class="slides">
-                <div class="slide"><img src="carousel1.jpg" alt="Slide 1"></div>
-                <div class="slide"><img src="carousel2.jpg" alt="Slide 2"></div>
-                <div class="slide"><img src="carousel3.jpg" alt="Slide 3"></div>
-            </div>
-            <button class="prev">❮</button>
-            <button class="next">❯</button>
-        </section>
-        <section>
-            
-        </section>
-
+        <!--footer section-->
         <footer>
-        
-            <div>
-                hhhh
+            <footer class="footer-distributed">
+                <hr style="border-top: dotted 1px #848485;" /> 
+                <a name="contact"></a>
+                <div class="footer-left">   
+                    <img src="./assets/logo.jpg"/>                  
+                    <div class="footer-icons">                
+                        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+                        <a href="https://www.facebook.com/GlobalShapersTshwaneHub/" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="https://za.linkedin.com/company/tshwanehub" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/tshwanehub/" target="_blank"><i class="fa fa-instagram"></i></a>
+                    </div>                            
+                </div>
+                <div class="footer-center">
+                    <div>
+                        <i class="fa fa-map-marker"></i>
+                        <p> Tshwane, Pretoria </p>
+                    </div>
+              
+                    <div>
+                        <i class="fa fa-phone"></i>
+                        <p>012 345 6789</p>
+                    </div>
+              
+                    <div>
+                        <i class="fa fa-envelope"></i>
+                        <p><a href="mailto:info@tshwanehub.org">info@tshwanehub.org</a></p>
+                        </div>
+              
+                </div>              
+                <div class="footer-right">
+                    <p class="footer-company-about">
+                        <span > About </span>
+                        Providing aesthetically beautiful web design and software development.
+                    </p>
+                </div>                        
+            
                 <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                 viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
                     <defs>
@@ -140,10 +169,10 @@
                         <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
                         <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
                     </g>
-                </svg>
+                </svg>            
+            </footer>
             
-            </div>  
-        </footer>
+        </footer>    
         
     </body>
 
