@@ -14,3 +14,5 @@ $(".option").click(function(){
     $(this).addClass("active");
     
  });
+
+ 
