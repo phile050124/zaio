@@ -1,5 +1,5 @@
 /* main */
-body { 
+body { /* styling for all the pages*/
     margin:0px; 
     padding:0px; 
     background-position: center;
@@ -19,12 +19,15 @@ header {
 
 .header-banner {
    /* background-color: #333;*/
-    background-image: url('assesment1\assets\shaper.jpg');
+    background-image: url('./assets/shaper.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size:100% 100% ;
     width: 100%;
     height: 300px;;
+    position:sticky;
+    top: 0;
+    z-index: -1;
 }
 
 header h1 {
@@ -37,7 +40,7 @@ header h1 {
 }
 
 .fixed-header {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%; 
@@ -46,11 +49,12 @@ header h1 {
 /* navigation bar*/
 nav {
     width: 100%;
-    height: 60px;
+    height: 70px;
     background: blue;
-    display: block;
+    display:block;
     z-index: 100;
-    position: relative;
+    position: sticky;
+    margin-top: 0;
 }
 
 nav div {
@@ -60,20 +64,30 @@ nav div {
     position: absolute;
     top: 0;
     left: 2%;
-    visibility: hidden;
+    visibility: visible;
 }
 
 .visible-title {
     visibility: visible;
+    position: relative;
+    text-align: center(100% -60px);
+
 }
 
 nav ul { 
     list-style-type: none;
     margin: 0 2% auto 0;
-    padding-left: 20;
+    padding-left: 30;
     text-align: right;
     max-width: 100%;
-    display:flexbox;
+    display:block;
+    justify-content: flex-end;
+}
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 nav ul li { 
@@ -95,7 +109,7 @@ nav ul li a {
     /* Logo Image */
 .logo-container img#logo {
   height: auto;
-  max-height: 80px;
+  max-height: 60px;
   width: auto; 
 }
    /*end  of navigation bar*/
@@ -139,14 +153,13 @@ nav ul li a {
   
 .bio {
     text-align: center;
-    background: url('./asset.jpeg') no-repeat center center/cover;/* add a bg pic*/
-    color: white;
+    background: url('./assets/') no-repeat center center/cover;/* add a bg pic*/
     padding: 100px 20px;
 }
 
 .custom-btn {
     background-color: #3498db;
-    color: white;
+    color: blue;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
@@ -156,12 +169,35 @@ nav ul li a {
 .btn:hover {
     background-color: #105bbd;
 }
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
 
+.stats .stat {
+    text-align: center;
+    background: #f7f7f7;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    margin: 10px;
+}
+
+.stats .stat h3 {
+    color: #007BFF;
+    margin-bottom: 5px;
+}
 
 /*projects*/  
 .projects {
     padding: 40px 20px;
     text-align: center;
+    position: relative;
+
 }
 
 .wrapper{
@@ -293,6 +329,11 @@ transform-style: preserve-3d;
     color: rgba(255,255,255,0.7);
     font-family: 'Montserrat';
     font-weight: 300;
+}
+@media only screen and (max-width: 768px){
+    .container {
+        width:100%;
+    }
 }
   /*about styling*/
 /* About Section */
@@ -529,6 +570,104 @@ section {
     width: 100%;
     border-radius: 8px;
 }
+/*gallery*/
+* {
+    box-sizing: border-box;
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 .cta {
     text-align: center;
@@ -699,8 +838,8 @@ input[type="email"]:focus {
     margin: 0 auto;
     padding: 20px;
     width: 100%;
-    max-width: 800px; /* Optional: Set a max width for the form */
-    min-height: 100vh; /* Ensures vertical centering */
+    max-width: 800px;
+    min-height: 100vh;
     box-sizing: border-box;
 }
 
