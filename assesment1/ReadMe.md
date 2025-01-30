@@ -37,7 +37,7 @@ The website consists of the following key sections:
 ---
 
 ## 🌐 Website Link  
-🔗 **Live Deployment:** [INSERT_DEPLOYMENT_LINK_HERE](#)  
+🔗 **Live Deployment:** [https://zaio-eight.vercel.app/](#)  
 
 ---
 
@@ -50,18 +50,9 @@ This project was designed to:
 ---
 
 ## 📝 Notes for Assessment  
-- The website was built using **HTML, CSS, JavaScript, and (React/Next.js if applicable)**.  
+- The website was built using **HTML, CSS and JavaScript**.  
 - The design follows a **clean and modern layout** to enhance readability and accessibility.  
 - Navigation is **simple and intuitive**, ensuring users can find information effortlessly.  
-
----
-
-## 📞 Contact  
-For further details about the project, please contact:  
-
-📧 **Student Name:** Nkosingiphile Ceprien Sefodi  
-📧 **Instructor:** [INSERT TEACHER’S NAME]  
-📍 **Institution:** Kasi Digital Global Shapers Community Tshwane Hub  
 
 ---
 
