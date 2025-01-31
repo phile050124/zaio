@@ -37,7 +37,7 @@ The website consists of the following key sections:
 ---
 
 ## 🌐 Website Link  
-🔗 **Live Deployment:** [https://tshwanehub.vercel.app/](#)  
+🔗 **Live Deployment:** [https://Tshwanehub.vercel.app/](#)  
 
 ---
 
