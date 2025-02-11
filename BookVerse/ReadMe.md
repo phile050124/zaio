@@ -1,7 +1,3 @@
-Here's a **README.md** template for your project that you can use to document your API and guide others on how to run and test your app.
-
----
-
 # BookVerse API
 
 BookVerse is an online bookstore that allows users to browse books, manage their profiles, and add books to their wishlist. This API is built using **Node.js**, **Express**, and **MongoDB**.
